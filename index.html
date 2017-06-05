@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ram Subramanian - Ad Filmmaker</title>
+
+
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link rel="stylesheet" href="cover1.css">
+<style type="text/css">
+	   body {
+     padding-top: 50px;
+     background-color: #333333;
+     scroll-behavior: smooth;
+      }
+    .glyphicon-thumbs-down {
+        color:red;
+      }
+      .glyphicon-thumbs-up {
+        color:green;
+      }
+      .sliderImg {
+       width:100%; height:500px !important;
+      }
+      .navbar_elements {
+        text-decoration: none;
+        border-bottom: 3px solid #666363;
+      }
+      .navbar_elements:hover {
+        border-bottom: 3px solid #FFFFFF;
+        background: #333333;
+        background: -webkit-linear-gradient(#191919, #333333);
+        background: -o-linear-gradient(#191919, #333333);
+        background: -moz-linear-gradient(#191919, #333333);
+        background: linear-gradient(#191919, #333333);
+      }
+      .navbar-ram {
+        background: #333333;
+        background: -webkit-linear-gradient(#191919, #333333);
+        background: -o-linear-gradient(#191919, #333333);
+        background: -moz-linear-gradient(#191919, #333333);
+        background: linear-gradient(#191919, #333333); 
+        opacity: 0.7;
+        filter: alpha(opacity=70); 
+      }
+      #footer-ram {
+        background: #333333;
+        background: -webkit-linear-gradient(bottom, #333333, #191919);
+        background: -o-linear-gradient(bottom, #333333, #191919);
+        background: -moz-linear-gradient(bottom, #333333, #191919);
+        background: linear-gradient(to bottom, #333333, #191919);
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+      }
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #eeeeee;
+  left: 50%;
+  margin-left: -1.5px;
+}
+.timeline > li {
+  margin-bottom: 20px;
+  position: relative;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li > .timeline-panel {
+  width: 50%;
+  float: left;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+.timeline > li.timeline-inverted + li:not(.timeline-inverted),
+.timeline > li:not(.timeline-inverted) + li.timeline-inverted {
+margin-top: -60px;
+}
+
+.timeline > li:not(.timeline-inverted) {
+padding-right:90px;
+}
+
+.timeline > li.timeline-inverted {
+padding-left:90px;
+}
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  content: " ";
+}
+.timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+.timeline > li > .timeline-badge {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  margin-left: -25px;
+  background-color: #999999;
+  z-index: 100;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+}
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+.timeline-badge.primary {
+  background-color: #2e6da4 !important;
+}
+.timeline-badge.success {
+  background-color: #3f903f !important;
+}
+.timeline-badge.warning {
+  background-color: #f0ad4e !important;
+}
+.timeline-badge.danger {
+  background-color: #d9534f !important;
+}
+.timeline-badge.info {
+  background-color: #5bc0de !important;
+}
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+}
+.timeline-body > p,
+.timeline-body > ul {
+  margin-bottom: 0;
+}
+.timeline-body > p + p {
+  margin-top: 5px;
+}
+.msgBox {
+  background: transparent;
+}
+.timelineLinks {
+  color:#d1332e;
+  text-decoration: none;
+}
+.timelineLinks:hover {
+  color:#d1332e;
+}
+.btnRAM {
+  border:1px solid #FFFFFF;
+}
+.btnRAM:hover {
+  background-color: white;
+}
+</style>
+   <link href="https://fonts.googleapis.com/css?family=Lato|Titillium+Web" rel="stylesheet">
+</head>
+<body>
+
+
+    <nav class="navbar navbar-inverse navbar-ram navbar-fixed-top" style="padding: 5px; border-bottom: none;">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">RAM SUBRAMANIAN</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li style="padding-left: 5px; padding-right: 5px;"><a href="#" class="navbar_elements">HOME</a></li>
+            <li style="padding-left: 5px; padding-right: 5px;"><a href="#" class="navbar_elements">ABOUT</a></li>
+            <li style="padding-left: 5px; padding-right: 5px;"><a href="#" class="navbar_elements">WORK</a></li>
+            <li style="padding-left: 5px; padding-right: 5px;"><a href="#" class="navbar_elements">CONTACT</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="padding-top: 20px;">
+<div class="carousel-inner">
+        <div class="item">
+        <img src="assets/ram.jpeg" class="img-responsive sliderImg" alt="Los Angeles">
+        </div>
+
+        <div class="item">
+        <img src="assets/ram2.jpeg" class="img-responsive sliderImg" alt="Chicago">
+        </div>
+
+        <div class="item">
+        <img src="assets/ram3.jpeg" class="img-responsive sliderImg" alt="New York">
+        </div>
+
+        <div class="item">
+        <img src="assets/ram4.png" class="img-responsive sliderImg" alt="New York">
+        </div>
+
+        <div class="item active">
+        <img src="assets/ram5.jpeg" class="img-responsive sliderImg" alt="New York">
+        </div>
+</div>
+<div class="carousel-caption" style="opacity: 0.9;filter: alpha(opacity=90);">
+  <h1><strong><span style="font-size:55px;">RAM SUBRAMANIAN</span></strong></h1>
+  <h3>Ad Filmmaker, Activist.</h3>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <p class="lead" style="padding-top:10px;">
+              <a href="#" class="btn btn-lg btn-default">Learn more</a>
+            </p> -->
+
+
+<br>
+<br>
+<div class="container">
+<div class="row">
+<div class="col-lg-4">
+<h1 style="font-family: 'Titillium Web', Helvetica, Arial, sans-serif; font-size: 30px; font-weight: 700; letter-spacing: 0.15em;"><big>WHO IS HE?</big></h1>
+</div>
+<div class="col-lg-8">
+<h3 style="text-align: left;">
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed est sagittis, faucibus nunc nec, dictum nisl. Sed sagittis sollicitudin pharetra. Nam vel quam id nisl pellentesque efficitur ut eget erat. Donec sagittis rhoncus elit sed pellentesque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque lacinia in diam et egestas. Quisque nec eros erat. Vivamus in porttitor diam. Vivamus hendrerit vel purus quis maximus. Aliquam facilisis velit est, at porttitor ante dignissim in. Etiam nisl sapien, finibus a arcu at, lacinia aliquet tortor. Maecenas tristique aliquet dui, non bibendum sapien. Duis laoreet fringilla pharetra.
+<br>
+<br>
+Proin consequat consectetur mauris, quis porttitor leo. Etiam luctus pharetra bibendum. Nam sagittis elit sem, at cursus magna pellentesque eu. Etiam in sagittis lorem. In eget mauris auctor, tristique purus sit amet, pellentesque tortor. Quisque vel nisi et lacus vulputate aliquam in quis turpis. Duis ut lacus non lectus pellentesque interdum. Vivamus posuere, orci vel sodales sodales, augue ipsum convallis augue, eget sodales odio arcu quis velit. Vestibulum aliquet, nibh ac porttitor posuere, nisl ex pulvinar justo, nec egestas metus odio sit amet turpis. Nullam et augue mi. Sed molestie est eget sapien sagittis, nec feugiat dui tristique.
+</h3>
+</div>
+</div>
+</div>
+<br>
+<br>
+<div class="container">
+<div class="row">
+<div class="col-lg-4">
+<h1 style="font-family: 'Titillium Web', Helvetica, Arial, sans-serif; font-size: 30px; font-weight: 700; letter-spacing: 0.15em;"><big>WHAT HAS HE DONE?</big></h1>
+</div>
+<div class="col-lg-8">
+<h3 style="text-align: left;">
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed est sagittis, faucibus nunc nec, dictum nisl. Sed sagittis sollicitudin pharetra. Nam vel quam id nisl pellentesque efficitur ut eget erat. Donec sagittis rhoncus elit sed pellentesque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque lacinia in diam et egestas. Quisque nec eros erat. Vivamus in porttitor diam. Vivamus hendrerit vel purus quis maximus. Aliquam facilisis velit est, at porttitor ante dignissim in. Etiam nisl sapien, finibus a arcu at, lacinia aliquet tortor. Maecenas tristique aliquet dui, non bibendum sapien. Duis laoreet fringilla pharetra.
+</h3>
+
+<div id="collapseDemo" class="collapse">
+<br>
+<br>
+<!-- TIMELINE STARTS -->
+<h2>Timeline</h2>
+<hr>
+<br>
+<ul class="timeline">
+        <li>
+          <div class="timeline-badge"><i class="glyphicon glyphicon-certificate"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Entered Ad world</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2000 - 07</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>
+              Entered Ad world as a copywriter. 
+              Won numerous national and international awards for advertising
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge warning"><i class="glyphicon glyphicon-certificate"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Directed his first ad for Neo Sports</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2003 - 07</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis.</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge danger"><i class="glyphicon glyphicon-certificate"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Ventured into full time Ad direction</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2008 - 13</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>Directed ads like: Levis Curve ID, ING Spy and Chor Chase ad, Economic Times - Power of Ideas, Tata Ace, Savsol Bike, Thomas Cook and Nokia.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+        <div class="timeline-badge info"><i class="glyphicon glyphicon-certificate"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Founded Handloom Picture Company</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2013 - present</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>Directed ads for: Thomas Cook, ING Vysa, Bajaj Electricals, Bingo, Dabur Chyawanprash, Saffola Life, Indiamart, Myntra.</p>
+              <hr>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2014</small></p><br>
+              <ul>
+                <li>Written and directed revolutionary videos: Mute, Unmute and Pause</li>
+                <li>Mute shortlisted under <a href="http://www.campaignindia.in/article/cannes-2014-jwt-handloom-picture-company-among-film-lions-shortlists/421059" target="_blank" class="timelineLinks">Cannes Lion</a> category at Cannes Film Festival</li>
+                <li>Pause triggered a movement called <a href="http://blogs.timesofindia.indiatimes.com/personal-political/the-dearneighbour-peace-challenge/" target="_blank" class="timelineLinks"> #DearNeighbour</a> which intended to initiate dialogues between citizens of India and Pakistan</li>
+                <li>Conceptualized and Directed 'Samwad' advertisement for Aam Aadmi Party. This resulted into a viral movement called <a href="http://www.dailyo.in/politics/arvind-kejriwal-aam-aadmi-party-velfie-vishal-dadlani-delhi-elections/story/1/2364.html" target="_blank" class="timelineLinks"> #VelfieForKejriwal</a> among people of India</li>
+              </ul>
+              <hr>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2015</small></p><br>
+              <ul>
+              <li>Ram Subramanian was invited to TEDx Gateway to talk about Mute, Unmute and Pause</li>
+              <li>Started #IAmKejriwal campaign</li>
+              <li>Directed advertisement 'Yeh toh Abhi Shuruat hai..' for Aam Aadmi party on the occasion of completion of one year of rule in Delhi</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge success"><i class="glyphicon glyphicon-certificate"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Founded Voice of Ram</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2016 - present</small></p>
+            </div>
+            <div class="timeline-body">
+              <ul>
+              <li>Started #ProfileForPeace campaign to promote good ties between India and Pakistan at an individual level. This campaign became a viral hit in both the nations and motivated citizens of both the nations to start a dialogue with each other. This campaign was joined by various celebrities from both the nations. To name some:Vishal Dadlani from India, Rehan Allahwalla from Pakistan etc</li>
+              <li>Started #ProfileForPeace - T20 World Cup Campaign. Under this people from both the nations came forward to support each other’s Cricket team</li>
+              <li>Directed #ProfileForPeace Video (Gurmehar Kaur)</li>
+              <li>Directed #IAmTeamIndia video. It featured Saina Nehwal and carried a message for India before Rio Olympics</li>
+              <li>Peace Up video featured Ram Subramanian, was directed by himself. The video carried a message of peace for the people of India &amp; Pakistan</li>
+              <li>#KillTerroristsNotTalks campaign was started by Ram Subramanian to appeal to the government of both the nation to take a diplomatic path to curb terrorism instead of breaking ties with each other. This campaign became a hot topic in both the nations as this time too, many renowned people like Mahesh Bhatt joined in</li>
+              <li>Ram Subramanian started 'The Green Project' to bring a small change in the teaching system of India</li>
+              </ul>
+              <hr>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2017</small></p><br>
+              <ul>
+              <li>During BMC elections of 2017, Ram Subramanian came forward to educate people about the cutting of Aarey Forests in and around Mumbai and to ask them to vote responsibly. The campaign was known as #VoteToSaveMumbai #VoteToSaveAarey</li>
+              <li>#StudentsAgainstABVP, the campaign which started after DU row in 2017 was initialy guided by Ram Subramanian. The campaign was supported students from various universities of India and led to a mass protest in Delhi</li>
+              <li>#LetsUncolour campaign was started to educate people about and to raise voice against commercially induced racism in Indian and other South Asian societies. The campaign caught the eye of media and was supported by various renowned people. This campaign is still in process</li>
+              <li>The Red Project initiative was started with the motive to connect blood donors in India and Pakistan based upon their city and blood group</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+    </ul>
+    <!-- TIMELINE ENDS -->
+</div>
+<br>
+<a class="btn msgBox btnRAM" data-toggle="collapse" data-target="#collapseDemo" id="timelineViewBTN">View my boring timeline</a>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+</div>
+</div>
+</div>
+
+<br>
+
+<div class="container-fluid" style="padding:40px; background-image: url('assets/ram5.jpeg'); background-size: cover; background-repeat: no-repeat;">
+  <div class="row">
+    <div class="col-lg-4">
+      <h1 style="font-family: 'Titillium Web', Helvetica, Arial, sans-serif; font-size: 30px; font-weight: 700; letter-spacing: 0.15em;"><big>HOW TO REACH HIM?</big></h1>
+
+      <h4>WRITE TO HIM.<br> USUALLY RESPONDS IN A WHILE.</h4>
+      <br>  
+      <form>
+       <div class="row">
+        <div class="col-lg-12">
+            <label for="exampleInputEmail1">Your Name</label>
+            <input type="text" class="form-control msgBox" id="exampleInputEmail1" placeholder="Your Name">
+        </div>
+        <br>
+        <br>
+        <div class="col-lg-12">
+            <label for="exampleInputPassword1">Email</label>
+            <input type="email" class="form-control msgBox" id="exampleInputPassword1" placeholder="Email Address">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+      <div class="col-lg-12">
+          <label for="exampleInputMessage">Message</label>
+          <textarea type="textarea" class="form-control msgBox" id="exampleInputMessage" placeholder="Your Message here!"></textarea>
+      </div>
+      </div>
+      <br>
+      <button type="button" class="btn msgBox btnRAM">Submit</button>
+      </form>
+
+
+    </div>
+    <div class="col-lg-2">
+    </div>
+    <div class="col-lg-6">
+     <h1 style="font-family: 'Titillium Web', Helvetica, Arial, sans-serif; font-size: 30px; font-weight: 700; letter-spacing: 0.15em;"><big>FOLLOW ME</big></h1>
+     <h4>KEEP IN TOUCH.</h4>
+     <br>
+     <br>
+     <h4><strong>FACEBOOK</strong></h4>
+     <br>
+     <h4><strong>TWITTER</strong></h4>
+     <br>
+     <h4><strong>YOUTUBE</strong></h4>
+    </div>
+  </div>
+</div>
+<br>
+
+<footer class="footer" id="footer-ram" style="padding: 5px;">
+        <p class="text-muted"><big><strong>&copy;ramsubramanian.in</strong></big></p>
+      
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript">
+$('.carousel').carousel({
+    interval: 3000
+});
+
+$('#myCarousel').on('slid.bs.carousel', function () {
+  var currentSlide = $(this).find('.active').index();
+  var responseUI = $('#responseUI');
+  var thumbsDown = responseUI.hasClass('glyphicon-thumbs-down');
+  if (currentSlide == 4) {
+    if(thumbsDown) {
+      return;
+    }
+    else {
+      responseUI.removeClass('glyphicon-thumbs-up').addClass('glyphicon-thumbs-down');
+    }
+  }
+  else {
+    if(thumbsDown == false) {
+      return;
+    }
+    else{
+      responseUI.removeClass('glyphicon-thumbs-down').addClass('glyphicon-thumbs-up');
+    }
+
+  }
+})
+
+    $(".collapse").on('shown.bs.collapse', function(){
+        $("#timelineViewBTN").html("Hide It!");
+    });
+    $(".collapse").on('hidden.bs.collapse', function(){
+        $("#timelineViewBTN").html("View my boring timeline!");
+    });
+</script>
+</body>
+</html>
