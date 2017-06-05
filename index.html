@@ -9,9 +9,10 @@
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<link rel="stylesheet" href="cover1.css">
+<link rel="stylesheet" href="assets/cover1.css">
+
 <style type="text/css">
-	   body {
+       body {
      padding-top: 50px;
      background-color: #333333;
      scroll-behavior: smooth;
@@ -212,6 +213,15 @@ padding-left:90px;
 #headerText {
   font-size: 55px;
 }
+.mainHeaderText {
+  font-family: 'Titillium Web', Helvetica, Arial, sans-serif; font-size: 30px; font-weight: 700; letter-spacing: 0.15em;
+}
+.navbarList {
+  padding-left: 5px; padding-right: 5px;
+}
+#contactContainer {
+  padding:40px; background-image: url('assets/ram5.jpeg'); background-size: cover; background-repeat: no-repeat;
+}
 @media screen and (max-width: 500px) {
     #headerText {
   font-size: 45px;
@@ -223,6 +233,7 @@ padding-left:90px;
 }
 }
 </style>
+
    <link href="https://fonts.googleapis.com/css?family=Lato|Titillium+Web" rel="stylesheet">
 </head>
 <body>
@@ -241,10 +252,10 @@ padding-left:90px;
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li style="padding-left: 5px; padding-right: 5px;"><a href="#" class="navbar_elements">HOME</a></li>
-            <li style="padding-left: 5px; padding-right: 5px;"><a href="#" class="navbar_elements">ABOUT</a></li>
-            <li style="padding-left: 5px; padding-right: 5px;"><a href="#" class="navbar_elements">WORK</a></li>
-            <li style="padding-left: 5px; padding-right: 5px;"><a href="#" class="navbar_elements">CONTACT</a></li>
+            <li class="navbarList"><a href="#" class="navbar_elements">HOME</a></li>
+            <li class="navbarList"><a href="#" class="navbar_elements">ABOUT</a></li>
+            <li class="navbarList"><a href="#" class="navbar_elements">WORK</a></li>
+            <li class="navbarList"><a href="#" class="navbar_elements">CONTACT</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -309,10 +320,10 @@ padding-left:90px;
 <div class="container">
 <div class="row">
 <div class="col-lg-4">
-<h1 style="font-family: 'Titillium Web', Helvetica, Arial, sans-serif; font-size: 30px; font-weight: 700; letter-spacing: 0.15em;"><big>WHO IS HE?</big></h1>
+<h1 class="mainHeaderText"><big>WHO IS HE?</big></h1>
 </div>
 <div class="col-lg-8">
-<h3 style="text-align: left;">
+<h3 class="text-left">
    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed est sagittis, faucibus nunc nec, dictum nisl. Sed sagittis sollicitudin pharetra. Nam vel quam id nisl pellentesque efficitur ut eget erat. Donec sagittis rhoncus elit sed pellentesque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque lacinia in diam et egestas. Quisque nec eros erat. Vivamus in porttitor diam. Vivamus hendrerit vel purus quis maximus. Aliquam facilisis velit est, at porttitor ante dignissim in. Etiam nisl sapien, finibus a arcu at, lacinia aliquet tortor. Maecenas tristique aliquet dui, non bibendum sapien. Duis laoreet fringilla pharetra.
 <br>
 <br>
@@ -326,10 +337,10 @@ Proin consequat consectetur mauris, quis porttitor leo. Etiam luctus pharetra bi
 <div class="container">
 <div class="row">
 <div class="col-lg-4">
-<h1 style="font-family: 'Titillium Web', Helvetica, Arial, sans-serif; font-size: 30px; font-weight: 700; letter-spacing: 0.15em;"><big>WHAT HAS HE DONE?</big></h1>
+<h1 class="mainHeaderText"><big>WHAT HAS HE DONE?</big></h1>
 </div>
 <div class="col-lg-8">
-<h3 style="text-align: left;">
+<h3 class="text-left">
    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed est sagittis, faucibus nunc nec, dictum nisl. Sed sagittis sollicitudin pharetra. Nam vel quam id nisl pellentesque efficitur ut eget erat. Donec sagittis rhoncus elit sed pellentesque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque lacinia in diam et egestas. Quisque nec eros erat. Vivamus in porttitor diam. Vivamus hendrerit vel purus quis maximus. Aliquam facilisis velit est, at porttitor ante dignissim in. Etiam nisl sapien, finibus a arcu at, lacinia aliquet tortor. Maecenas tristique aliquet dui, non bibendum sapien. Duis laoreet fringilla pharetra.
 </h3>
 
@@ -456,10 +467,10 @@ Proin consequat consectetur mauris, quis porttitor leo. Etiam luctus pharetra bi
 
 <br>
 
-<div class="container-fluid" style="padding:40px; background-image: url('assets/ram5.jpeg'); background-size: cover; background-repeat: no-repeat;">
+<div class="container-fluid" id="contactContainer">
   <div class="row">
     <div class="col-lg-4">
-      <h1 style="font-family: 'Titillium Web', Helvetica, Arial, sans-serif; font-size: 30px; font-weight: 700; letter-spacing: 0.15em;"><big>HOW TO REACH HIM?</big></h1>
+      <h1 class="mainHeaderText"><big>HOW TO REACH HIM?</big></h1>
 
       <h4>WRITE TO HIM.<br> USUALLY RESPONDS IN A WHILE.</h4>
       <br>  
@@ -492,7 +503,7 @@ Proin consequat consectetur mauris, quis porttitor leo. Etiam luctus pharetra bi
     <div class="col-lg-2">
     </div>
     <div class="col-lg-6">
-     <h1 style="font-family: 'Titillium Web', Helvetica, Arial, sans-serif; font-size: 30px; font-weight: 700; letter-spacing: 0.15em;"><big>FOLLOW ME</big></h1>
+     <h1 class="mainHeaderText"><big>FOLLOW ME</big></h1>
      <h4>KEEP IN TOUCH.</h4>
      <br>
      <br>
