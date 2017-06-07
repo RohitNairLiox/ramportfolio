@@ -618,31 +618,42 @@ $window.scroll(function() {
         }
     }
     else{
+      if (navbarElement1.hasClass("currentLink")) {
       navbarElement1.removeClass("currentLink");
+      }
     }
+
     if (currentScroll >= distance2 && currentScroll <= distance2_bottom) {
         if (!navbarElement2.hasClass("currentLink")) {
           navbarElement2.addClass("currentLink");
         }
     }
     else{
+      if (navbarElement2.hasClass("currentLink")) {
       navbarElement2.removeClass("currentLink");
+      }
     }
+
     if (currentScroll >= distance3 && currentScroll <= distance3_bottom) {
         if (!navbarElement3.hasClass("currentLink")) {
           navbarElement3.addClass("currentLink");
         }
     }
     else{
+      if (navbarElement3.hasClass("currentLink")) {
       navbarElement3.removeClass("currentLink");
+      }
     }
+    
     if (currentScroll >= distance4 && currentScroll <= distance4_bottom) {
         if (!navbarElement4.hasClass("currentLink")) {
           navbarElement4.addClass("currentLink");
         }
     }
     else{
+      if (navbarElement4.hasClass("currentLink")) {
       navbarElement4.removeClass("currentLink");
+      }
     }
 });
 
