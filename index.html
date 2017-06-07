@@ -585,12 +585,7 @@ Proin consequat consectetur mauris, quis porttitor leo. Etiam luctus pharetra bi
 $('.carousel').carousel({
     interval: 3000
 });
-$(".collapse").on('shown.bs.collapse', function(){
-    $("#timelineViewBTN").html("Hide It!");
-});
-$(".collapse").on('hidden.bs.collapse', function(){
-    $("#timelineViewBTN").html("View my boring timeline!");
-});
+
 
 var sectionOne = $('#section1');
 var sectionTwo = $('#section2');
@@ -644,7 +639,7 @@ $window.scroll(function() {
       navbarElement3.removeClass("currentLink");
       }
     }
-    
+
     if (currentScroll >= distance4 && currentScroll <= distance4_bottom) {
         if (!navbarElement4.hasClass("currentLink")) {
           navbarElement4.addClass("currentLink");
@@ -657,6 +652,25 @@ $window.scroll(function() {
     }
 });
 
+function updateSections () {
+  distance2 =parseInt(sectionTwo.offset().top);
+  distance2_bottom =parseInt(distance2 + sectionTwo.innerHeight());
+
+  distance3 =parseInt(sectionThree.offset().top);
+  distance3_bottom =parseInt(distance3 + sectionThree.innerHeight());
+
+  distance4 =parseInt(sectionFour.offset().top);
+  distance4_bottom =parseInt(distance4 + sectionFour.innerHeight());
+}
+
+$(".collapse").on('shown.bs.collapse', function(){
+    updateSections();
+    $("#timelineViewBTN").html("Hide It!");
+});
+$(".collapse").on('hidden.bs.collapse', function(){
+    updateSections();
+    $("#timelineViewBTN").html("View my boring timeline!");
+});
 </script>
 </body>
 </html>
