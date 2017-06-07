@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>Ram Subramanian - Ad Filmmaker</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
 	<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -17,14 +20,11 @@
      background-color: #333333;
      scroll-behavior: smooth;
       }
-    .glyphicon-thumbs-down {
-        color:red;
-      }
-      .glyphicon-thumbs-up {
-        color:green;
-      }
+      a:focus {
+    outline: 0;
+}
       .sliderImg {
-       width:100%; height:500px !important;
+       width:100%; height:600px !important;
       }
       .navbar_elements {
         text-decoration: none;
@@ -196,9 +196,30 @@ padding-left:90px;
 }
 .msgBox {
   background: transparent;
+  border:2px solid white;
+  color: white;
+  border-radius: 0px;
+  font-size: 17px;
+}
+.msgBox::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    white;
+}
+.msgBox:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    white;
+   opacity:  1;
+}
+.msgBox::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    white;
+   opacity:  1;
+}
+.msgBox:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    white;
+}
+.msgBox::-ms-input-placeholder { /* Microsoft Edge */
+   color:    white;
 }
 .timelineLinks {
-  color:#d1332e;
+  color:#3F903F;
   text-decoration: none;
 }
 .timelineLinks:hover {
@@ -222,15 +243,37 @@ padding-left:90px;
 #contactContainer {
   padding:40px; background-image: url('assets/ram5.jpeg'); background-size: cover; background-repeat: no-repeat;
 }
-@media screen and (max-width: 500px) {
+.followLinez {
+  width: 50%; height: 150px; padding:2px; border-right:8px dotted red;
+}
+@media screen and (max-width: 980px) {
+.followLinez {
+  display: none;
+}
+}
+@media screen and (max-width: 590px) {
     #headerText {
   font-size: 45px;
 }
 }
-@media screen and (max-width: 396px) {
+@media screen and (max-width: 448px) {
     #headerText {
   font-size: 35px;
 }
+}
+@media screen and (max-width: 385px) {
+    #headerText {
+  font-size: 30px;
+}
+}
+.carousel-caption {
+  background-color:rgba(0,0,0,0.5);
+}
+.subParagraphtext{
+  font-family: 'Lato', sans-serif;
+}
+.currentLink {
+  border-bottom: 3px solid white;
 }
 </style>
 
@@ -252,10 +295,10 @@ padding-left:90px;
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="navbarList"><a href="#" class="navbar_elements">HOME</a></li>
-            <li class="navbarList"><a href="#" class="navbar_elements">ABOUT</a></li>
-            <li class="navbarList"><a href="#" class="navbar_elements">WORK</a></li>
-            <li class="navbarList"><a href="#" class="navbar_elements">CONTACT</a></li>
+            <li class="navbarList"><a href="#section1" class="navbar_elements" id="navbarElement1">ABOUT</a></li>
+            <li class="navbarList"><a href="#section2" class="navbar_elements" id="navbarElement2">WORK</a></li>
+            <li class="navbarList"><a href="#section3" class="navbar_elements" id="navbarElement3">COVERAGE</a></li>
+            <li class="navbarList"><a href="#contactContainer" class="navbar_elements" id="navbarElement4">CONTACT</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -275,28 +318,28 @@ padding-left:90px;
 <div id="myCarousel" class="carousel slide" data-ride="carousel" style="padding-top: 20px;">
 <div class="carousel-inner">
         <div class="item">
-        <img src="assets/ram.jpeg" class="img-responsive sliderImg" alt="Los Angeles">
+        <img src="assets/ram1.jpg" class="img-responsive sliderImg" alt="Ram Subramanian">
         </div>
 
         <div class="item">
-        <img src="assets/ram2.jpeg" class="img-responsive sliderImg" alt="Chicago">
-        </div>
-
-        <div class="item">
-        <img src="assets/ram3.jpeg" class="img-responsive sliderImg" alt="New York">
-        </div>
-
-        <div class="item">
-        <img src="assets/ram4.png" class="img-responsive sliderImg" alt="New York">
+        <img src="assets/ram2.jpg" class="img-responsive sliderImg" alt="Ram Subramanian">
         </div>
 
         <div class="item active">
-        <img src="assets/ram5.jpeg" class="img-responsive sliderImg" alt="New York">
+        <img src="assets/ram3.png" class="img-responsive sliderImg" alt="Ram Subramanian">
+        </div>
+
+        <div class="item">
+        <img src="assets/ram4.png" class="img-responsive sliderImg" alt="Ram Subramanian">
+        </div>
+
+        <div class="item">
+        <img src="assets/ram5.jpeg" class="img-responsive sliderImg" alt="Ram Subramanian">
         </div>
 </div>
-<div class="carousel-caption" style="opacity: 0.9;filter: alpha(opacity=90);">
-  <h1 class="text-center" id="headerText"><strong>RAM SUBRAMANIAN</strong></h1>
-  <h3>Ad Filmmaker, Activist.</h3>
+<div class="carousel-caption">
+  <h1 class="text-center subParagraphtext" id="headerText"><strong>RAM SUBRAMANIAN</strong></h1>
+  <h3 class="subParagraphtext">Ad Filmmaker, Activist.</h3>
 </div>
 </div>
 
@@ -309,21 +352,17 @@ padding-left:90px;
 
 
 
-
-            <!-- <p class="lead" style="padding-top:10px;">
-              <a href="#" class="btn btn-lg btn-default">Learn more</a>
-            </p> -->
-
-
 <br>
-<br>
-<div class="container">
+<div class="container" id="section1">
 <div class="row">
 <div class="col-lg-4">
+<br>
 <h1 class="mainHeaderText"><big>WHO IS HE?</big></h1>
+<div class="followLinez"></div>
 </div>
 <div class="col-lg-8">
-<h3 class="text-left">
+<h3 class="text-left subParagraphtext">
+<br>
    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed est sagittis, faucibus nunc nec, dictum nisl. Sed sagittis sollicitudin pharetra. Nam vel quam id nisl pellentesque efficitur ut eget erat. Donec sagittis rhoncus elit sed pellentesque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque lacinia in diam et egestas. Quisque nec eros erat. Vivamus in porttitor diam. Vivamus hendrerit vel purus quis maximus. Aliquam facilisis velit est, at porttitor ante dignissim in. Etiam nisl sapien, finibus a arcu at, lacinia aliquet tortor. Maecenas tristique aliquet dui, non bibendum sapien. Duis laoreet fringilla pharetra.
 <br>
 <br>
@@ -333,14 +372,16 @@ Proin consequat consectetur mauris, quis porttitor leo. Etiam luctus pharetra bi
 </div>
 </div>
 <br>
-<br>
-<div class="container">
+<div class="container" id="section2">
 <div class="row">
 <div class="col-lg-4">
+<br>
 <h1 class="mainHeaderText"><big>WHAT HAS HE DONE?</big></h1>
+<div class="followLinez"></div>
 </div>
 <div class="col-lg-8">
-<h3 class="text-left">
+<h3 class="text-left subParagraphtext">
+<br>
    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed est sagittis, faucibus nunc nec, dictum nisl. Sed sagittis sollicitudin pharetra. Nam vel quam id nisl pellentesque efficitur ut eget erat. Donec sagittis rhoncus elit sed pellentesque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque lacinia in diam et egestas. Quisque nec eros erat. Vivamus in porttitor diam. Vivamus hendrerit vel purus quis maximus. Aliquam facilisis velit est, at porttitor ante dignissim in. Etiam nisl sapien, finibus a arcu at, lacinia aliquet tortor. Maecenas tristique aliquet dui, non bibendum sapien. Duis laoreet fringilla pharetra.
 </h3>
 
@@ -403,19 +444,17 @@ Proin consequat consectetur mauris, quis porttitor leo. Etiam luctus pharetra bi
               <p>Directed ads for: Thomas Cook, ING Vysa, Bajaj Electricals, Bingo, Dabur Chyawanprash, Saffola Life, Indiamart, Myntra.</p>
               <hr>
               <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2014</small></p><br>
-              <ul>
-                <li>Written and directed revolutionary videos: Mute, Unmute and Pause</li>
-                <li>Mute shortlisted under <a href="http://www.campaignindia.in/article/cannes-2014-jwt-handloom-picture-company-among-film-lions-shortlists/421059" target="_blank" class="timelineLinks">Cannes Lion</a> category at Cannes Film Festival</li>
-                <li>Pause triggered a movement called <a href="http://blogs.timesofindia.indiatimes.com/personal-political/the-dearneighbour-peace-challenge/" target="_blank" class="timelineLinks"> #DearNeighbour</a> which intended to initiate dialogues between citizens of India and Pakistan</li>
-                <li>Conceptualized and Directed 'Samwad' advertisement for Aam Aadmi Party. This resulted into a viral movement called <a href="http://www.dailyo.in/politics/arvind-kejriwal-aam-aadmi-party-velfie-vishal-dadlani-delhi-elections/story/1/2364.html" target="_blank" class="timelineLinks"> #VelfieForKejriwal</a> among people of India</li>
-              </ul>
+                <p class="text-left">&diams; Written and directed revolutionary videos: Mute, Unmute and Pause</p>
+                <p class="text-left">&diams; Mute shortlisted under <a href="http://www.campaignindia.in/article/cannes-2014-jwt-handloom-picture-company-among-film-lions-shortlists/421059" target="_blank" class="timelineLinks">Cannes Lion</a> category at Cannes Film Festival</p>
+                <p class="text-left">&diams; Pause triggered a movement called <a href="http://blogs.timesofindia.indiatimes.com/personal-political/the-dearneighbour-peace-challenge/" target="_blank" class="timelineLinks"> #DearNeighbour</a> which intended to initiate dialogues between citizens of India and Pakistan</p>
+                <p class="text-left">&diams; Conceptualized and Directed 'Samwad' advertisement for Aam Aadmi Party. This resulted into a viral movement called <a href="http://www.dailyo.in/politics/arvind-kejriwal-aam-aadmi-party-velfie-vishal-dadlani-delhi-elections/story/1/2364.html" target="_blank" class="timelineLinks"> #VelfieForKejriwal</a> among people of India</p>
               <hr>
               <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2015</small></p><br>
-              <ul>
-              <li>Ram Subramanian was invited to TEDx Gateway to talk about Mute, Unmute and Pause</li>
-              <li>Started #IAmKejriwal campaign</li>
-              <li>Directed advertisement 'Yeh toh Abhi Shuruat hai..' for Aam Aadmi party on the occasion of completion of one year of rule in Delhi</li>
-              </ul>
+              
+              <p class="text-left">&diams; Ram Subramanian was invited to TEDx Gateway to talk about Mute, Unmute and Pause</p>
+              <p class="text-left">&diams; Started #IAmKejriwal campaign</p>
+              <p class="text-left">&diams; Directed advertisement 'Yeh toh Abhi Shuruat hai..' for Aam Aadmi party on the occasion of completion of one year of rule in Delhi</p>
+              
             </div>
           </div>
         </li>
@@ -427,23 +466,21 @@ Proin consequat consectetur mauris, quis porttitor leo. Etiam luctus pharetra bi
               <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2016 - present</small></p>
             </div>
             <div class="timeline-body">
-              <ul>
-              <li>Started #ProfileForPeace campaign to promote good ties between India and Pakistan at an individual level. This campaign became a viral hit in both the nations and motivated citizens of both the nations to start a dialogue with each other. This campaign was joined by various celebrities from both the nations. To name some:Vishal Dadlani from India, Rehan Allahwalla from Pakistan etc</li>
-              <li>Started #ProfileForPeace - T20 World Cup Campaign. Under this people from both the nations came forward to support each other’s Cricket team</li>
-              <li>Directed #ProfileForPeace Video (Gurmehar Kaur)</li>
-              <li>Directed #IAmTeamIndia video. It featured Saina Nehwal and carried a message for India before Rio Olympics</li>
-              <li>Peace Up video featured Ram Subramanian, was directed by himself. The video carried a message of peace for the people of India &amp; Pakistan</li>
-              <li>#KillTerroristsNotTalks campaign was started by Ram Subramanian to appeal to the government of both the nation to take a diplomatic path to curb terrorism instead of breaking ties with each other. This campaign became a hot topic in both the nations as this time too, many renowned people like Mahesh Bhatt joined in</li>
-              <li>Ram Subramanian started 'The Green Project' to bring a small change in the teaching system of India</li>
-              </ul>
+              <p class="text-left">&diams; Started #ProfileForPeace campaign to promote good ties between India and Pakistan at an individual level. This campaign became a viral hit in both the nations and motivated citizens of both the nations to start a dialogue with each other. This campaign was joined by various celebrities from both the nations. To name some:Vishal Dadlani from India, Rehan Allahwalla from Pakistan etc</p>
+              <p class="text-left">&diams; Started #ProfileForPeace - T20 World Cup Campaign. Under this people from both the nations came forward to support each other's Cricket team</p>
+              <p class="text-left">&diams; Directed #ProfileForPeace Video (Gurmehar Kaur)</p>
+              <p class="text-left">&diams; Directed #IAmTeamIndia video. It featured Saina Nehwal and carried a message for India before Rio Olympics</p>
+              <p class="text-left">&diams; Peace Up video featured Ram Subramanian, was directed by himself. The video carried a message of peace for the people of India &amp; Pakistan</p>
+              <p class="text-left">&diams; #KillTerroristsNotTalks campaign was started by Ram Subramanian to appeal to the government of both the nation to take a diplomatic path to curb terrorism instead of breaking ties with each other. This campaign became a hot topic in both the nations as this time too, many renowned people like Mahesh Bhatt joined in</p>
+              <p class="text-left">&diams; Ram Subramanian started 'The Green Project' to bring a small change in the teaching system of India</p>
+              
               <hr>
               <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2017</small></p><br>
-              <ul>
-              <li>During BMC elections of 2017, Ram Subramanian came forward to educate people about the cutting of Aarey Forests in and around Mumbai and to ask them to vote responsibly. The campaign was known as #VoteToSaveMumbai #VoteToSaveAarey</li>
-              <li>#StudentsAgainstABVP, the campaign which started after DU row in 2017 was initialy guided by Ram Subramanian. The campaign was supported students from various universities of India and led to a mass protest in Delhi</li>
-              <li>#LetsUncolour campaign was started to educate people about and to raise voice against commercially induced racism in Indian and other South Asian societies. The campaign caught the eye of media and was supported by various renowned people. This campaign is still in process</li>
-              <li>The Red Project initiative was started with the motive to connect blood donors in India and Pakistan based upon their city and blood group</li>
-              </ul>
+              
+              <p class="text-left">&diams; During BMC elections of 2017, Ram Subramanian came forward to educate people about the cutting of Aarey Forests in and around Mumbai and to ask them to vote responsibly. The campaign was known as #VoteToSaveMumbai #VoteToSaveAarey</p>
+              <p class="text-left">&diams; #StudentsAgainstABVP, the campaign which started after DU row in 2017 was initialy guided by Ram Subramanian. The campaign was supported students from various universities of India and led to a mass protest in Delhi</p>
+              <p class="text-left">&diams; #LetsUncolour campaign was started to educate people about and to raise voice against commercially induced racism in Indian and other South Asian societies. The campaign caught the eye of media and was supported by various renowned people. This campaign is still in process</p>
+              <p class="text-left">&diams; The Red Project initiative was started with the motive to connect blood donors in India and Pakistan based upon their city and blood group</p>
             </div>
           </div>
         </li>
@@ -464,6 +501,26 @@ Proin consequat consectetur mauris, quis porttitor leo. Etiam luctus pharetra bi
 </div>
 </div>
 </div>
+
+
+
+
+<div class="container" id="section3">
+<div class="row">
+<div class="col-lg-4">
+<br>
+<h1 class="mainHeaderText"><big>MEDIA COVERAGE</big></h1>
+<div class="followLinez"></div>
+</div>
+<div class="col-lg-8">
+<h3 class="text-left subParagraphtext">
+<br>
+Proin consequat consectetur mauris, quis porttitor leo. Etiam luctus pharetra bibendum. Nam sagittis elit sem, at cursus magna pellentesque eu. Etiam in sagittis lorem. In eget mauris auctor, tristique purus sit amet, pellentesque tortor. Quisque vel nisi et lacus vulputate aliquam in quis turpis. Duis ut lacus non lectus pellentesque interdum. Vivamus posuere, orci vel sodales sodales, augue ipsum convallis augue, eget sodales odio arcu quis velit. Vestibulum aliquet, nibh ac porttitor posuere, nisl ex pulvinar justo, nec egestas metus odio sit amet turpis. Nullam et augue mi. Sed molestie est eget sapien sagittis, nec feugiat dui tristique.
+</h3>
+</div>
+</div>
+</div>
+
 
 <br>
 
@@ -528,36 +585,67 @@ Proin consequat consectetur mauris, quis porttitor leo. Etiam luctus pharetra bi
 $('.carousel').carousel({
     interval: 3000
 });
+$(".collapse").on('shown.bs.collapse', function(){
+    $("#timelineViewBTN").html("Hide It!");
+});
+$(".collapse").on('hidden.bs.collapse', function(){
+    $("#timelineViewBTN").html("View my boring timeline!");
+});
 
-$('#myCarousel').on('slid.bs.carousel', function () {
-  var currentSlide = $(this).find('.active').index();
-  var responseUI = $('#responseUI');
-  var thumbsDown = responseUI.hasClass('glyphicon-thumbs-down');
-  if (currentSlide == 4) {
-    if(thumbsDown) {
-      return;
-    }
-    else {
-      responseUI.removeClass('glyphicon-thumbs-up').addClass('glyphicon-thumbs-down');
-    }
-  }
-  else {
-    if(thumbsDown == false) {
-      return;
+var sectionOne = $('#section1');
+var sectionTwo = $('#section2');
+var sectionThree = $('#section3');
+var sectionFour = $('#contactContainer');
+
+var distance1 =parseInt(sectionOne.offset().top);
+var distance2 =parseInt(sectionTwo.offset().top);
+var distance3 =parseInt(sectionThree.offset().top);
+var distance4 =parseInt(sectionFour.offset().top);
+var distance1_bottom =parseInt(distance1 + sectionOne.innerHeight()); 
+var distance2_bottom =parseInt(distance2 + sectionTwo.innerHeight()); 
+var distance3_bottom =parseInt(distance3 + sectionThree.innerHeight()); 
+var distance4_bottom =parseInt(distance4 + sectionFour.innerHeight()); 
+    $window = $(window);
+var navbarElement1 = $("#navbarElement1");
+var navbarElement2 = $("#navbarElement2");
+var navbarElement3 = $("#navbarElement3");
+var navbarElement4 = $("#navbarElement4");
+$window.scroll(function() {
+  var currentScroll = $window.scrollTop()+100;
+    if (currentScroll  >= distance1 && currentScroll  <= distance1_bottom) {
+        if (!navbarElement1.hasClass("currentLink")) {
+          navbarElement1.addClass("currentLink");
+        }
     }
     else{
-      responseUI.removeClass('glyphicon-thumbs-down').addClass('glyphicon-thumbs-up');
+      navbarElement1.removeClass("currentLink");
     }
+    if (currentScroll >= distance2 && currentScroll <= distance2_bottom) {
+        if (!navbarElement2.hasClass("currentLink")) {
+          navbarElement2.addClass("currentLink");
+        }
+    }
+    else{
+      navbarElement2.removeClass("currentLink");
+    }
+    if (currentScroll >= distance3 && currentScroll <= distance3_bottom) {
+        if (!navbarElement3.hasClass("currentLink")) {
+          navbarElement3.addClass("currentLink");
+        }
+    }
+    else{
+      navbarElement3.removeClass("currentLink");
+    }
+    if (currentScroll >= distance4 && currentScroll <= distance4_bottom) {
+        if (!navbarElement4.hasClass("currentLink")) {
+          navbarElement4.addClass("currentLink");
+        }
+    }
+    else{
+      navbarElement4.removeClass("currentLink");
+    }
+});
 
-  }
-})
-
-    $(".collapse").on('shown.bs.collapse', function(){
-        $("#timelineViewBTN").html("Hide It!");
-    });
-    $(".collapse").on('hidden.bs.collapse', function(){
-        $("#timelineViewBTN").html("View my boring timeline!");
-    });
 </script>
 </body>
 </html>
