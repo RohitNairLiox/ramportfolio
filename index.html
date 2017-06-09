@@ -618,12 +618,13 @@ var navbarElement4 = $("#navbarElement4");
 var collapseStatus = "hidden"; 
 $window.scroll(function() {
   var currentScroll = $window.scrollTop()+100;
-    if (currentScroll  >= distance1 && currentScroll  <= distance1_bottom) {
+  var currentScrollLine = currentScroll+200;
+    if (currentScrollLine  >= distance1 && currentScroll  <= distance1_bottom) {
         if (!navbarElement1.hasClass("currentLink")) {
           navbarElement1.addClass("currentLink");
         }
-        if(currentScroll+300>line1_Location && currentScroll+200<distance1_bottom) {
-          Line1_move(currentScroll-650);
+        if(currentScrollLine>line1_Location && currentScrollLine<distance1_bottom) {
+          Line1_move(currentScroll-680);
         }
 
     }
@@ -637,7 +638,7 @@ $window.scroll(function() {
         if (!navbarElement2.hasClass("currentLink")) {
           navbarElement2.addClass("currentLink");
         }
-      if(currentScroll+300>line2_Location && currentScroll+200<distance2_bottom) {
+      if(currentScrollLine>line2_Location && currentScrollLine<distance2_bottom) {
           Line2_move(currentScroll-1250);
         }
     }
@@ -651,9 +652,9 @@ $window.scroll(function() {
         if (!navbarElement3.hasClass("currentLink")) {
           navbarElement3.addClass("currentLink");
         }
-        if(currentScroll+300>line3_Location && currentScroll+200<distance3_bottom) {
+        if(currentScrollLine>line3_Location && currentScrollLine<distance3_bottom) {
           if (collapseStatus == "hidden"){
-            Line3_move(currentScroll-1670);
+            Line3_move(currentScroll-1700);
           }
           else if(collapseStatus == "shown") {
             Line3_move(currentScroll-4500);
@@ -689,6 +690,7 @@ function updateSections () {
   distance4 = Math.round(sectionFour.offset().top);
   distance4_bottom = Math.round(distance4 + sectionFour.innerHeight());
 
+  line2_Location = Math.round(Line2.offset().top);
   line3_Location = Math.round(Line3.offset().top);
 }
 
@@ -698,9 +700,9 @@ $(".collapse").on('shown.bs.collapse', function(){
     $("#timelineViewBTN").html("Hide It!");
 });
 $(".collapse").on('hidden.bs.collapse', function(){
-    updateSections();
+    Line2.height(282);
     collapseStatus = "hidden";
-    Line3_move(172);
+    updateSections();
     $("#timelineViewBTN").html("View my boring timeline!");
 });
 
@@ -709,7 +711,7 @@ $("#section1").mousemove(function(e) {
   var mousePos = e.pageY;
   if (!(mousePos >= distance1_bottom)) {
     var divHeight = Math.abs(line1_Location - mousePos);
-    Line3_move(divHeight);
+    Line1_move(divHeight);
   }
 }).mouseover();
 
@@ -733,10 +735,12 @@ function Line1_move (distance) {
   Line1.height(distance);
 }
 function Line2_move (distance) {
-  Line2.height(distance);
+ 
+ Line2.height(distance);
+  
 }
 function Line3_move (distance) {
-  Line3.height(distance);
+    Line3.height(distance);
 } 
 </script>
 </body>
