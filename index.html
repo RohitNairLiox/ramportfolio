@@ -22,7 +22,7 @@
       }
       a:focus {
     outline: 0;
-}
+      }
       .sliderImg {
        width:100%; height:600px !important;
       }
@@ -244,7 +244,7 @@ padding-left:90px;
   padding:40px; background-image: url('assets/ram5.jpeg'); background-size: cover; background-repeat: no-repeat;
 }
 .followLinez {
-  width: 50%; height: 150px; padding:2px; border-right:8px dotted red;
+  width: 50%; height: 100%; padding:2px; border-right:8px dotted red;
 }
 @media screen and (max-width: 980px) {
 .followLinez {
@@ -300,7 +300,7 @@ padding-left:90px;
             <li class="navbarList"><a href="#section3" class="navbar_elements" id="navbarElement3">COVERAGE</a></li>
             <li class="navbarList"><a href="#contactContainer" class="navbar_elements" id="navbarElement4">CONTACT</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
       </div>
     </nav>
 
@@ -358,7 +358,7 @@ padding-left:90px;
 <div class="col-lg-4">
 <br>
 <h1 class="mainHeaderText"><big>WHO IS HE?</big></h1>
-<div class="followLinez"></div>
+<div class="followLinez" id="followLine1"></div>
 </div>
 <div class="col-lg-8">
 <h3 class="text-left subParagraphtext">
@@ -377,7 +377,7 @@ Proin consequat consectetur mauris, quis porttitor leo. Etiam luctus pharetra bi
 <div class="col-lg-4">
 <br>
 <h1 class="mainHeaderText"><big>WHAT HAS HE DONE?</big></h1>
-<div class="followLinez"></div>
+<div class="followLinez" id="followLine2"></div>
 </div>
 <div class="col-lg-8">
 <h3 class="text-left subParagraphtext">
@@ -510,7 +510,7 @@ Proin consequat consectetur mauris, quis porttitor leo. Etiam luctus pharetra bi
 <div class="col-lg-4">
 <br>
 <h1 class="mainHeaderText"><big>MEDIA COVERAGE</big></h1>
-<div class="followLinez"></div>
+<div class="followLinez" id="followLine3"></div>
 </div>
 <div class="col-lg-8">
 <h3 class="text-left subParagraphtext">
@@ -591,26 +591,41 @@ var sectionOne = $('#section1');
 var sectionTwo = $('#section2');
 var sectionThree = $('#section3');
 var sectionFour = $('#contactContainer');
-
-var distance1 =parseInt(sectionOne.offset().top);
-var distance2 =parseInt(sectionTwo.offset().top);
-var distance3 =parseInt(sectionThree.offset().top);
-var distance4 =parseInt(sectionFour.offset().top);
-var distance1_bottom =parseInt(distance1 + sectionOne.innerHeight()); 
-var distance2_bottom =parseInt(distance2 + sectionTwo.innerHeight()); 
-var distance3_bottom =parseInt(distance3 + sectionThree.innerHeight()); 
-var distance4_bottom =parseInt(distance4 + sectionFour.innerHeight()); 
+var Line1 = $("#followLine1");
+var Line2 = $("#followLine2");
+var Line3 = $("#followLine3");
+var line1_Location = Math.round(Line1.offset().top);
+var line2_Location = Math.round(Line2.offset().top);
+var line3_Location = Math.round(Line3.offset().top);
+var distance1 = Math.round(sectionOne.offset().top);
+var distance2 = Math.round(sectionTwo.offset().top);
+var distance2_Init = distance2;
+var distance3 = Math.round(sectionThree.offset().top);
+var distance4 = Math.round(sectionFour.offset().top);
+var distance1_bottom = Math.round(distance1 + sectionOne.innerHeight()); 
+var distance1_bottomInit = distance1_bottom; 
+var distance2_bottom = Math.round(distance2 + sectionTwo.innerHeight());
+var distance2_bottomInit = distance2_bottom;
+var distance3_bottom = Math.round(distance3 + sectionThree.innerHeight()); 
+var distance3_bottomInit = distance3_bottom; 
+var distance4_bottom = Math.round(distance4 + sectionFour.innerHeight()); 
+var distance4_bottomInit = distance4_bottom;
     $window = $(window);
 var navbarElement1 = $("#navbarElement1");
 var navbarElement2 = $("#navbarElement2");
 var navbarElement3 = $("#navbarElement3");
 var navbarElement4 = $("#navbarElement4");
+var collapseStatus = "hidden"; 
 $window.scroll(function() {
   var currentScroll = $window.scrollTop()+100;
     if (currentScroll  >= distance1 && currentScroll  <= distance1_bottom) {
         if (!navbarElement1.hasClass("currentLink")) {
           navbarElement1.addClass("currentLink");
         }
+        if(currentScroll+300>line1_Location && currentScroll+200<distance1_bottom) {
+          Line1_move(currentScroll-650);
+        }
+
     }
     else{
       if (navbarElement1.hasClass("currentLink")) {
@@ -622,6 +637,9 @@ $window.scroll(function() {
         if (!navbarElement2.hasClass("currentLink")) {
           navbarElement2.addClass("currentLink");
         }
+      if(currentScroll+300>line2_Location && currentScroll+200<distance2_bottom) {
+          Line2_move(currentScroll-1250);
+        }
     }
     else{
       if (navbarElement2.hasClass("currentLink")) {
@@ -632,6 +650,14 @@ $window.scroll(function() {
     if (currentScroll >= distance3 && currentScroll <= distance3_bottom) {
         if (!navbarElement3.hasClass("currentLink")) {
           navbarElement3.addClass("currentLink");
+        }
+        if(currentScroll+300>line3_Location && currentScroll+200<distance3_bottom) {
+          if (collapseStatus == "hidden"){
+            Line3_move(currentScroll-1670);
+          }
+          else if(collapseStatus == "shown") {
+            Line3_move(currentScroll-4500);
+          }
         }
     }
     else{
@@ -652,25 +678,66 @@ $window.scroll(function() {
     }
 });
 
+
 function updateSections () {
-  distance2 =parseInt(sectionTwo.offset().top);
-  distance2_bottom =parseInt(distance2 + sectionTwo.innerHeight());
+  distance2 = Math.round(sectionTwo.offset().top);
+  distance2_bottom = Math.round(distance2 + sectionTwo.innerHeight());
 
-  distance3 =parseInt(sectionThree.offset().top);
-  distance3_bottom =parseInt(distance3 + sectionThree.innerHeight());
+  distance3 = Math.round(sectionThree.offset().top);
+  distance3_bottom = Math.round(distance3 + sectionThree.innerHeight());
 
-  distance4 =parseInt(sectionFour.offset().top);
-  distance4_bottom =parseInt(distance4 + sectionFour.innerHeight());
+  distance4 = Math.round(sectionFour.offset().top);
+  distance4_bottom = Math.round(distance4 + sectionFour.innerHeight());
+
+  line3_Location = Math.round(Line3.offset().top);
 }
 
 $(".collapse").on('shown.bs.collapse', function(){
     updateSections();
+    collapseStatus = "shown";
     $("#timelineViewBTN").html("Hide It!");
 });
 $(".collapse").on('hidden.bs.collapse', function(){
     updateSections();
+    collapseStatus = "hidden";
+    Line3_move(172);
     $("#timelineViewBTN").html("View my boring timeline!");
 });
+
+
+$("#section1").mousemove(function(e) {
+  var mousePos = e.pageY;
+  if (!(mousePos >= distance1_bottom)) {
+    var divHeight = Math.abs(line1_Location - mousePos);
+    Line3_move(divHeight);
+  }
+}).mouseover();
+
+$("#section2").mousemove(function(e) {
+  var mousePos = e.pageY;
+  if (!(mousePos >= distance2_bottom)) {
+    var divHeight = Math.abs(line2_Location - mousePos);
+    Line2_move(divHeight);
+  }
+}).mouseover();
+
+$("#section3").mousemove(function(e) {
+  var mousePos = e.pageY;
+  if (!(mousePos >= distance3_bottom)) {
+    var divHeight = Math.abs(line3_Location - mousePos);
+    Line3_move(divHeight);
+  }
+}).mouseover();
+
+function Line1_move (distance) {
+  Line1.height(distance);
+}
+function Line2_move (distance) {
+  Line2.height(distance);
+}
+function Line3_move (distance) {
+  Line3.height(distance);
+} 
 </script>
 </body>
 </html>
