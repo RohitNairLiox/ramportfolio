@@ -3,6 +3,7 @@ var sectionOne = $('#section1');
 var sectionTwo = $('#section2');
 var sectionThree = $('#section3');
 var sectionFour = $('#contactContainer');
+var Logo = $("#site_logo");
 var navbarElement1 = $("#navbarElement1");
 var navbarElement2 = $("#navbarElement2");
 var navbarElement3 = $("#navbarElement3");
@@ -20,7 +21,21 @@ var distance4_bottom = Math.round(distance4 + sectionFour.innerHeight());
 
 
 $window.scroll(function() {
-  var currentScroll = $window.scrollTop()+100;
+  var currentScroll = $window.scrollTop();
+  var Logo_Class = Logo.hasClass("logo_img_nrml");
+  if (currentScroll > 120) {
+  	if (Logo_Class) {
+  		Logo.removeClass("logo_img_nrml");
+	  	Logo.addClass("logo_img_sml");
+  	}
+  }
+  else {
+  	if (!Logo_Class) {
+	  	Logo.removeClass("logo_img_sml");
+	  	Logo.addClass("logo_img_nrml");	
+  	}
+  }
+  currentScroll = currentScroll + 100;
 
   var navbar1Status = navbarElement1.hasClass("currentLink");
   var navbar2Status = navbarElement2.hasClass("currentLink");

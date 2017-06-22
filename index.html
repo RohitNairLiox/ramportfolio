@@ -16,9 +16,7 @@
 
 <style type="text/css">
 html {
-
-     background-color: #010102;
-     background-size: cover;
+background-color: #010102;
 }
        body {
      padding-top: 40px;
@@ -32,7 +30,7 @@ html {
     outline: 0;
       }
       .sliderImg {
-       background-size:cover ; height:580px !important;
+       background-size:cover ; height:620px !important;
        width:100%;
        opacity: 0.9;
         filter: alpha(opacity=90);
@@ -49,6 +47,7 @@ html {
         background-image: none; 
         opacity: 0.9;
         filter: alpha(opacity=90); 
+        padding: 5px; border-bottom: none;
       }
       #footer-ram {
         opacity: 0.7;
@@ -245,35 +244,9 @@ padding-left:90px;
 .followLinez {
   width: 50%; height: 100%; padding:2px; border-right:8px dotted red;
 }
-@media screen and (max-width: 980px) {
-.followLinez {
-  display: none;
-}
-.sliderImg {
-  width:100%; height:500px !important;
- }
-}
-@media screen and (max-width: 590px) {
-    #headerText {
-  font-size: 45px;
-}
-.sliderImg {
-       width:100%; height:400px !important;
-      }
-}
-@media screen and (max-width: 448px) {
-    #headerText {
-  font-size: 35px;
-}
-.sliderImg {
-       width:100%; height:360px !important;
-      }
-}
-@media screen and (max-width: 385px) {
-    #headerText {
-  font-size: 30px;
-}
-}
+
+
+
 .carousel-caption {
   background-color:rgba(0,0,0,0.5);
 }
@@ -327,8 +300,6 @@ padding-left:90px;
 .cssload-loader::after {
   bottom: 0;
 }
-
-
 
 @keyframes cssload-load {
   0% {
@@ -415,8 +386,74 @@ padding-left:90px;
   }
 }
 
+.logo_img_nrml {
+  width: 140px;
+}
+.logo_img_sml {
+  width: 130px;
+}
+#img-parent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+#image1 {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+#image2 {
+  position: absolute;
+  top: 50px;
+  left: 1px;
+  padding-right: 300px;
+}
+#image3 {
+  position: absolute;
+  top: 10px;
+  left: 1px;
+
+}
 
 
+
+
+
+@media screen and (max-width: 980px) {
+.followLinez {
+  display: none;
+}
+.sliderImg {
+  width:100%; height:500px !important;
+ }
+#image2 {
+  padding-right: 0px;
+ }
+ #image3 {
+  display: none;
+ }
+}
+@media screen and (max-width: 590px) {
+#headerText {
+  font-size: 45px;
+}
+.sliderImg {
+       width:100%; height:400px !important;
+      }
+}
+@media screen and (max-width: 448px) {
+#headerText {
+  font-size: 35px;
+}
+.sliderImg {
+       width:100%; height:360px !important;
+      }
+}
+@media screen and (max-width: 385px) {
+#headerText {
+  font-size: 30px;
+}
+}
 </style>
 
    <link href="https://fonts.googleapis.com/css?family=Lato|Titillium+Web" rel="stylesheet">
@@ -427,7 +464,7 @@ padding-left:90px;
 </div>
 <div id="postLoad">
 
-    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar-ram" style="padding: 5px; border-bottom: none;">
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar-ram">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -436,7 +473,7 @@ padding-left:90px;
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">RAM SUBRAMANIAN</a>
+          <a class="pull-left" href="#"><img src="assets/RS-logo.png" class="logo_img_nrml" id="site_logo"></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -451,8 +488,10 @@ padding-left:90px;
 
 
 
-<div>
-<img src="assets/ram-3D-cover.jpg" class="sliderImg">
+<div id="img-parent">
+<img src="assets/BG.jpg" class="sliderImg" id="image1">
+<img src="assets/typewriter.png" class="sliderImg" id="image2">
+<img src="assets/name-plate.png" class="sliderImg" id="image3">
 </div>
 
 
@@ -475,11 +514,8 @@ padding-left:90px;
 <div class="col-lg-8">
 <h3 class="text-left subParagraphtext">
 <br>
-   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed est sagittis, faucibus nunc nec, dictum nisl. Sed sagittis sollicitudin pharetra. Nam vel quam id nisl pellentesque efficitur ut eget erat. Donec sagittis rhoncus elit sed pellentesque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque lacinia in diam et egestas. Quisque nec eros erat. Vivamus in porttitor diam. Vivamus hendrerit vel purus quis maximus. Aliquam facilisis velit est, at porttitor ante dignissim in. Etiam nisl sapien, finibus a arcu at, lacinia aliquet tortor. Maecenas tristique aliquet dui, non bibendum sapien. Duis laoreet fringilla pharetra.
+   Ram Subramanian is multi-talented personality who uses communication to constantly redefine our society. He has built brands, created new ideas, broken old rules, initiated movements and supported social causes. Some of his work has become case studies and some have become the new normal in advertising and communication, around the world. Ram heads Handloom Picture Company, a production house that owns “Voice Of Ram”, a powerful online platform, with a huge following.
 <br>
-<br>
-Proin consequat consectetur mauris, quis porttitor leo. Etiam luctus pharetra bibendum. Nam sagittis elit sem, at cursus magna pellentesque eu. Etiam in sagittis lorem. In eget mauris auctor, tristique purus sit amet, pellentesque tortor. Quisque vel nisi et lacus vulputate aliquam in quis turpis. Duis ut lacus non lectus pellentesque interdum. Vivamus posuere, orci vel sodales sodales, augue ipsum convallis augue, eget sodales odio arcu quis velit. Vestibulum aliquet, nibh ac porttitor posuere, nisl ex pulvinar justo, nec egestas metus odio sit amet turpis. Nullam et augue mi. Sed molestie est eget sapien sagittis, nec feugiat dui tristique.
-</h3>
 </div>
 </div>
 </div>
@@ -494,8 +530,9 @@ Proin consequat consectetur mauris, quis porttitor leo. Etiam luctus pharetra bi
 <div class="col-lg-8">
 <h3 class="text-left subParagraphtext">
 <br>
-   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed est sagittis, faucibus nunc nec, dictum nisl. Sed sagittis sollicitudin pharetra. Nam vel quam id nisl pellentesque efficitur ut eget erat. Donec sagittis rhoncus elit sed pellentesque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque lacinia in diam et egestas. Quisque nec eros erat. Vivamus in porttitor diam. Vivamus hendrerit vel purus quis maximus. Aliquam facilisis velit est, at porttitor ante dignissim in. Etiam nisl sapien, finibus a arcu at, lacinia aliquet tortor. Maecenas tristique aliquet dui, non bibendum sapien. Duis laoreet fringilla pharetra.
-</h3>
+Ram Subramanian has produced hundreds of viral messages and campaigns in the past few years. His repertoire, as a filmmaker, includes artistic TV commercials, powerful short-films and emotional social-change videos.
+<br>
+As a peace activist, he has ignited many iconic mass movements like the DearNeighbour Movement, #ProfileForPeace and created personalities like ‘Gurmehar Kaur – A martyr’s daughter’ that made headlines all around the world. As a political/communication strategist, Ram played an instrumental role in building Arvind Kejriwal’s AAP and helping the political outfit create history by winning an unprecedented 67 out of 70 seats in 2014 Delhi elections. Some of his work for AAP is their communication template even today.</h3>
 
 <div id="collapseDemo" class="collapse">
 <br>
@@ -621,14 +658,26 @@ Proin consequat consectetur mauris, quis porttitor leo. Etiam luctus pharetra bi
 <div class="row">
 <div class="col-lg-4">
 <br>
-<h1 class="mainHeaderText"><big>MEDIA COVERAGE</big></h1>
+<h1 class="mainHeaderText"><big>PRESS &amp; RECOGNITION</big></h1>
 <div class="followLinez" id="followLine3"></div>
 </div>
 <div class="col-lg-8">
 <h3 class="text-left subParagraphtext">
+<br>  Ram Subramanian has won multiple awards in India and around the world, from Cannes Lions to the coveted British D&amp;AD for his work in advertising. He has also made news all around the world for his work as a peace activist.</h3>
+</div>
+</div>
+</div>
+
+<div class="container" id="section4">
+<div class="row">
+<div class="col-lg-4">
 <br>
-Proin consequat consectetur mauris, quis porttitor leo. Etiam luctus pharetra bibendum. Nam sagittis elit sem, at cursus magna pellentesque eu. Etiam in sagittis lorem. In eget mauris auctor, tristique purus sit amet, pellentesque tortor. Quisque vel nisi et lacus vulputate aliquam in quis turpis. Duis ut lacus non lectus pellentesque interdum. Vivamus posuere, orci vel sodales sodales, augue ipsum convallis augue, eget sodales odio arcu quis velit. Vestibulum aliquet, nibh ac porttitor posuere, nisl ex pulvinar justo, nec egestas metus odio sit amet turpis. Nullam et augue mi. Sed molestie est eget sapien sagittis, nec feugiat dui tristique.
-</h3>
+<h1 class="mainHeaderText"><big>WHAT IS HE CURRENTLY DOING?</big></h1>
+<div class="followLinez" id="followLine4"></div>
+</div>
+<div class="col-lg-8">
+<h3 class="text-left subParagraphtext">
+<br>Ram is currently collaborating with few brands to help them with their communication and CSR work, consulting for a political outfit, working on a feature film and writing a book about his experiences in the advertising industry, politics and peace activism.</h3>
 </div>
 </div>
 </div>
@@ -639,7 +688,7 @@ Proin consequat consectetur mauris, quis porttitor leo. Etiam luctus pharetra bi
 <div class="container-fluid" id="contactContainer">
   <div class="row">
     <div class="col-lg-4">
-      <h1 class="mainHeaderText"><big>HOW TO REACH HIM?</big></h1>
+      <h1 class="mainHeaderText"><big>HOW TO GET IN TOUCH?</big></h1>
 
       <h4>WRITE TO HIM.<br> USUALLY RESPONDS IN A WHILE.</h4>
       <br>  
@@ -713,7 +762,7 @@ window.onload = function () {
   var scriptAppend = document.createElement('script');
     scriptAppend.type='text/javascript';
   if(followLinez_Visible == "block") {
-    scriptAppend.src="assets/ram-ui.js";
+    scriptAppend.src="assets/ram-ui.js?1";
   }
   else {
     scriptAppend.src="assets/ram-alt-ui.js";
