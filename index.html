@@ -29,12 +29,6 @@ background-color: #010102;
       a:focus {
     outline: 0;
       }
-      .sliderImg {
-       background-size:cover ; height:620px !important;
-       width:100%;
-       opacity: 0.9;
-        filter: alpha(opacity=90);
-      }
       .navbar_elements {
         text-decoration: none;
         border-bottom: 3px solid #666363;
@@ -387,10 +381,10 @@ padding-left:90px;
 }
 
 .logo_img_nrml {
-  width: 140px;
+  width: 75px;
 }
 .logo_img_sml {
-  width: 130px;
+  width: 65px;
 }
 #img-parent {
   position: relative;
@@ -401,58 +395,119 @@ padding-left:90px;
   position: relative;
   top: 0;
   left: 0;
+  background-size:cover ; height:620px !important;
+  width:100%;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
 }
 #image2 {
   position: absolute;
   top: 0px;
-  left: 0px;
+  left: 20px;
+  height:100%!important;
+  width:45%;
+  padding-top: 80px;
 }
 #image3 {
   position: absolute;
-  top: 10px;
-  right:0px;
-  width:1000px;
+  top: 120px;
+  right:40px;
+  width:700px;
+  height: 600px !important;
 }
 
 
+@media screen and (max-width: 1199px) {
+.mainHeaderText {
+  font-size:28px;
+}
+#image3 {
+  height: 500px !important;
+}
+}
 
 
-
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 991px) {
 .followLinez {
   display: none;
 }
-.sliderImg {
+#image1 {
   width:100%; height:500px !important;
  }
 #image2 {
   padding-right: 0px;
  }
  #image3 {
-  left: 1px;
-  width:800px;
+  width:600px;
+  height: 400px !important;
+ }
+ .logo_img_nrml {
+  width: 65px;
+}
+.logo_img_sml {
+  width: 55px;
+}
+}
+@media screen and (max-width: 720px) {
+ #image2 {
+  width:60%;
+ }
+ #image3 {
+  top:180px;
+  width:500px;
+  height: 300px !important;
  }
 }
+
 @media screen and (max-width: 590px) {
 #headerText {
   font-size: 45px;
 }
-.sliderImg {
+#image1 {
        width:100%; height:400px !important;
       }
+
+      #image2 {
+        width:75%;
+      }
+  #image3 {
+    top: 140px;
+  right:10px;
+  width:420px;
+ }
 }
 @media screen and (max-width: 448px) {
 #headerText {
   font-size: 35px;
 }
-.sliderImg {
+#image1 {
        width:100%; height:360px !important;
+      }
+      #image2 {
+       left:20px;
+      }
+      #image3 {
+        right:40px;
       }
 }
 @media screen and (max-width: 385px) {
 #headerText {
   font-size: 30px;
 }
+ #image2 {
+       left:30px;
+      }
+
+      #image3 {
+        right:20px;
+      }
+ .logo_img_nrml {
+  width: 60px;
+}
+.logo_img_sml {
+  width: 50px;
+}
+
 }
 </style>
 
@@ -473,7 +528,7 @@ padding-left:90px;
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="pull-left" href="#"><img src="assets/RS-logo.png" class="logo_img_nrml" id="site_logo"></a>
+          <a class="pull-left" href="#"><img src="assets/RS-logo.jpg" class="logo_img_nrml" id="site_logo"></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -489,9 +544,9 @@ padding-left:90px;
 
 
 <div id="img-parent">
-<img src="assets/BG.jpg" class="sliderImg" id="image1">
-<img src="assets/ram.png" class="sliderImg" id="image2">
-<img src="assets/name-plate.png" class="sliderImg" id="image3">
+<img src="assets/BG.jpg" id="image1">
+<img src="assets/ra-m.png" id="image2">
+<img src="assets/name_plate.png" id="image3">
 </div>
 
 
@@ -506,12 +561,12 @@ padding-left:90px;
 <br>
 <div class="container" id="section1">
 <div class="row">
-<div class="col-lg-4">
+<div class="col-md-4">
 <br>
 <h1 class="mainHeaderText"><big>WHO IS HE?</big></h1>
 <div class="followLinez" id="followLine1"></div>
 </div>
-<div class="col-lg-8"><br>
+<div class="col-md-8"><br>
 <h3 class="text-left subParagraphtext">
    Ram Subramanian is multi-talented personality who uses communication to constantly redefine our society. He has built brands, created new ideas, broken old rules, initiated movements and supported social causes. Some of his work has become case studies and some have become the new normal in advertising and communication, around the world. Ram heads Handloom Picture Company, a production house that owns “Voice Of Ram”, a powerful online platform, with a huge following.</h3><br>
    <div>
@@ -524,12 +579,12 @@ padding-left:90px;
 <br>
 <div class="container" id="section2">
 <div class="row">
-<div class="col-lg-4">
+<div class="col-md-4">
 <br>
 <h1 class="mainHeaderText"><big>WHAT HAS HE DONE?</big></h1>
 <div class="followLinez" id="followLine2"></div>
 </div>
-<div class="col-lg-8">
+<div class="col-md-8">
 <h3 class="text-left subParagraphtext">
 <br>
 Ram Subramanian has produced hundreds of viral messages and campaigns in the past few years. His repertoire, as a filmmaker, includes artistic TV commercials, powerful short-films and emotional social-change videos.
@@ -658,12 +713,12 @@ As a peace activist, he has ignited many iconic mass movements like the DearNeig
 
 <div class="container" id="section3">
 <div class="row">
-<div class="col-lg-4">
+<div class="col-md-4">
 <br>
 <h1 class="mainHeaderText"><big>PRESS &amp; RECOGNITION</big></h1>
 <div class="followLinez" id="followLine3"></div>
 </div>
-<div class="col-lg-8"><br>
+<div class="col-md-8"><br>
 <h3 class="text-left subParagraphtext">
 Ram Subramanian has won multiple awards in India and around the world, from Cannes Lions to the coveted British D&amp;AD for his work in advertising. He has also made news all around the world for his work as a peace activist.
 </h3><br>
@@ -680,27 +735,27 @@ Ram is currently collaborating with few brands to help them with their communica
 
 <div class="container-fluid" id="contactContainer">
   <div class="row">
-    <div class="col-lg-4">
+    <div class="col-md-4">
       <h1 class="mainHeaderText"><big>HOW TO GET IN TOUCH?</big></h1>
 
       <h4>WRITE TO HIM.<br> USUALLY RESPONDS IN A WHILE.</h4>
       <br>  
       <form>
        <div class="row">
-        <div class="col-lg-12">
+        <div class="col-md-12">
             <label for="exampleInputEmail1">Your Name</label>
             <input type="text" class="form-control msgBox" id="exampleInputEmail1" placeholder="Your Name">
         </div>
         <br>
         <br>
-        <div class="col-lg-12">
+        <div class="col-md-12">
             <label for="exampleInputPassword1">Email</label>
             <input type="email" class="form-control msgBox" id="exampleInputPassword1" placeholder="Email Address">
         </div>
       </div>
       <br>
       <div class="row">
-      <div class="col-lg-12">
+      <div class="col-md-12">
           <label for="exampleInputMessage">Message</label>
           <textarea type="textarea" class="form-control msgBox" id="exampleInputMessage" placeholder="Your Message here!"></textarea>
       </div>
@@ -711,9 +766,9 @@ Ram is currently collaborating with few brands to help them with their communica
 
 
     </div>
-    <div class="col-lg-2">
+    <div class="col-md-2">
     </div>
-    <div class="col-lg-6">
+    <div class="col-md-6">
      <h1 class="mainHeaderText"><big>FOLLOW ME</big></h1>
      <h4>KEEP IN TOUCH.</h4>
      <br>
