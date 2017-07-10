@@ -231,7 +231,7 @@ padding-left:90px;
 .subParagraphtext{
   font-family: 'Lato', sans-serif;
 }
-.currentLink {
+.active a {
   border-bottom: 3px solid white;
 }
 

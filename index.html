@@ -16,7 +16,7 @@
    <link href="assets/css/style.css?1" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=Lato|Titillium+Web" rel="stylesheet">
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="80">
 <div id="preLoad">
 <div class="cssload-loader">Loading</div>
 </div>
@@ -297,32 +297,6 @@ Ram is currently collaborating with few brands to help them with their communica
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script type="text/javascript">
-$('.carousel').carousel({
-    interval: 3000
-});
-function showPage() {
-  document.getElementById("preLoad").style.display = "none";
-  document.getElementById("postLoad").style.display = "block";
-}
- 
-
-window.onload = function () {
-  showPage();
-  var followLinez_Visible = $("#followLine1").css("display");
-  var scriptAppend = document.createElement('script');
-    scriptAppend.type='text/javascript';
-  if(followLinez_Visible == "block") {
-    scriptAppend.src="assets/js/ram-ui.js?1";
-  }
-  else {
-    scriptAppend.src="assets/js/ram-alt-ui.js";
-  }
-  $("body").append(scriptAppend);
-
-}
-
-
-</script>
+<script src="assets/js/index.js"></script>
 </body>
 </html>

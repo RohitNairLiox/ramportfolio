@@ -5,10 +5,6 @@ var sectionThree = $('#section3');
 var Logo = $("#site_logo");
 var sectionFour = $('#contactContainer');
 var navbar = $(".navbar_elements");
-var navbarElement1 = $("#navbarElement1");
-var navbarElement2 = $("#navbarElement2");
-var navbarElement3 = $("#navbarElement3");
-var navbarElement4 = $("#navbarElement4");
 var Line1 = $("#followLine1");
 var Line2 = $("#followLine2");
 var Line3 = $("#followLine3");
@@ -53,128 +49,25 @@ $window.scroll(function() {
   currentScroll = currentScroll + 100;
   var currentHead = currentScroll + 200;
 
-  var navbar1Status = navbarElement1.hasClass("currentLink");
-  var navbar2Status = navbarElement2.hasClass("currentLink");
-  var navbar3Status = navbarElement3.hasClass("currentLink");
-  var navbar4Status = navbarElement4.hasClass("currentLink");
+
 
 if (currentScroll  >= distance1 && currentScroll  <= distance1_bottom) {
-  if (!navbar1Status) {
-    navbarElement1.addClass("currentLink");
+  if(currentHead > line1_Location && currentHead < distance1_bottom) {
+    var distance = currentHead - line1_Location;
+    Line1_move(distance);
   }
-
-  if (navbar2Status || navbar3Status || navbar4Status) {
-    if (navbar2Status) {
-      navbarElement2.removeClass("currentLink");
-    }
-    else if (navbar3Status) {
-      navbarElement3.removeClass("currentLink");
-    }
-    else {
-      navbarElement4.removeClass("currentLink");
-    }
-  }
-
-
-if(currentHead > line1_Location && currentHead < distance1_bottom) {
-  var distance = currentHead - line1_Location;
-  Line1_move(distance);
-
 }
-
-
-}
-
-
 else if(currentScroll  >= distance2 && currentScroll  <= distance2_bottom) {
-
-  if (!navbar2Status) {
-    navbarElement2.addClass("currentLink");
-  }
-
-  if (navbar1Status || navbar3Status || navbar4Status) {
-    if (navbar1Status) {
-      navbarElement1.removeClass("currentLink");
-    }
-    else if (navbar3Status) {
-      navbarElement3.removeClass("currentLink");
-    }
-    else {
-      navbarElement4.removeClass("currentLink");
-    }
-  }
-
   if(currentHead > line2_Location && currentHead < distance2_bottom) {
-  var distance = currentHead - line2_Location;
-  Line2_move(distance);
-
+    var distance = currentHead - line2_Location;
+    Line2_move(distance);
+  }
 }
-
-}
-
-
 else if(currentScroll  >= distance3 && currentScroll  <= distance3_bottom) {
-/*Navbar Elements highlist*/
-  if (!navbar3Status) {
-    navbarElement3.addClass("currentLink");
-  }
-
-  if (navbar1Status || navbar2Status || navbar4Status) {
-    if (navbar2Status) {
-      navbarElement2.removeClass("currentLink");
-    }
-    else if (navbar1Status) {
-      navbarElement1.removeClass("currentLink");
-    }
-    else {
-      navbarElement4.removeClass("currentLink");
-    }
-  }
 /*Navbar Elements highlist END*/
-if(currentHead > line3_Location && currentHead < distance3_bottom) {
-  var distance = currentHead - line3_Location;
-  Line3_move(distance);
-
-}
-
-}
-
-
-else if(currentScroll  >= distance4 && currentScroll  <= distance4_bottom) {
-
-  if (!navbar4Status) {
-    navbarElement4.addClass("currentLink");
-  }
-
-  if (navbar2Status || navbar3Status || navbar1Status) {
-    if (navbar2Status) {
-      navbarElement2.removeClass("currentLink");
-    }
-    else if (navbar3Status) {
-      navbarElement3.removeClass("currentLink");
-    }
-    else {
-      navbarElement1.removeClass("currentLink");
-    }
-  }
-
-}
-
-
-else {
-  if (navbar1Status || navbar2Status || navbar3Status || navbar4Status) {
-    if (navbar1Status) {
-      navbarElement1.removeClass("currentLink");
-    }
-    else if (navbar2Status) {
-      navbarElement2.removeClass("currentLink");
-    }
-    else if (navbar3Status) {
-      navbarElement3.removeClass("currentLink");
-    }
-    else {
-      navbarElement4.removeClass("currentLink");
-    }
+  if(currentHead > line3_Location && currentHead < distance3_bottom) {
+    var distance = currentHead - line3_Location;
+    Line3_move(distance);
   }
 }
 
